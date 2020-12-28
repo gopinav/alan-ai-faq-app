@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "question": "How do I create an account on CodeAlan?",
+    "answer": "You can create your account on CodeAlan by entering and verifying your mobile number. Click on \"Create New Account\" after that and fill up the form to create your CodeAlan account."
+  },
+  {
+    "id": "2",
+    "question": "How can I pay for my order at CodeAlan?",
+    "answer": "We support the following payment options at CodeAlan:\n Cash On Delivery (available in selected pin codes) \nCredit Card \nDebit Card \nNet banking \nGift Card \nWallet"
+  },
+  {
+    "id": "3",
+    "question": "How can I check if CodeAlan delivers to my PIN Code?",
+    "answer": "You can find out if CodeAlan delivers to your PIN Code using the courier serviceability tool available on the product page."
+  },
+  {
+    "id": "4",
+    "question": "How do I check the status of my order?",
+    "answer": "Please tap on \"My Orders\" section under main menu of App/Website to check your order status."
+  },
+  {
+    "id": "5",
+    "question": "What is CodeAlan's Cancellation Policy?",
+    "answer": "You can cancel an order when it is in packed/shipped status, as long as the cancel option is available on App/Website."
+  },
+  {
+    "id": "6",
+    "question": "How do I cancel my Order?",
+    "answer": "Tap on \"My Orders\" section under the main menu of your App/Website/M-site and then select the item or order you want to cancel"
+  },
+  {
+    "id": "7",
+    "question": "I just cancelled my order. When will I receive my refund?",
+    "answer": "For payments made via Credit Card, Debit Card, Net Banking, or Wallet you will receive refund into the source account within 7-10 days from the time of order cancellation."
+  },
+  {
+    "id": "8",
+    "question": "How do I create a Return Request?",
+    "answer": "You can create a Return in three simple steps\n 1. Tap on MyOrders \n 2. Choose the item to be Returned \n 3.Enter details requested and create a return request"
+  },
+  {
+    "id": "9",
+    "question": "How do I return multiple products from a single order?",
+    "answer": "If you are returning multiple products from a single order then, you will receive a separate Return ID via e-mail for each item. If you are self-shipping the products, you can ship all the products in a single shipment."
+  },
+  {
+    "id": "10",
+    "question": "How long would it take me to receive the refund of the returned product?",
+    "answer": "After the refund has been initiated by CodeAlan as per the Returns Policy, the refund amount is expected to reflect in the customer account in 1-3 business days."
+  }
+]
