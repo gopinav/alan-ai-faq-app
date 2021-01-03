@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChakraProvider, theme, useColorMode } from '@chakra-ui/react';
+import { ChakraProvider, theme } from '@chakra-ui/react';
 import { Navbar } from './Navbar';
 import { Faq } from './Faq';
 import alanBtn from '@alan-ai/alan-sdk-web';
@@ -8,8 +8,7 @@ import { scroller } from 'react-scroll';
 export const App = () => {
   const alanBtnInstance = useRef(null);
   const [index, setIndex] = useState(null);
-  const [toggleFlag, setToggleFlag] = useState(false);
-  const { toggleColorMode } = useColorMode();
+  const [toggleColorFlag, setToggleColorFlag] = useState(false);
 
   useEffect(() => {
     if (!alanBtnInstance.current) {
@@ -25,20 +24,16 @@ export const App = () => {
             });
             setIndex(commandData.faqId - 1);
           } else if (commandData.command === 'toggleColorMode') {
-            setToggleFlag(flag => !flag);
+            setToggleColorFlag(flag => !flag);
           }
         },
       });
     }
   }, []);
 
-  useEffect(() => {
-    toggleColorMode();
-  }, [toggleFlag]);
-
   return (
     <ChakraProvider theme={theme}>
-      <Navbar />
+      <Navbar toggleColorFlag={toggleColorFlag} />
       <Faq index={index} setIndex={setIndex} />
     </ChakraProvider>
   );
