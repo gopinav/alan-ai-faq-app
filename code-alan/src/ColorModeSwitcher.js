@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 export const ColorModeSwitcher = props => {
+  const firstUpdate = useRef(true);
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue('dark', 'light');
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   useEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+      return;
+    }
     toggleColorMode();
   }, [props.toggleColorFlag]);
 
