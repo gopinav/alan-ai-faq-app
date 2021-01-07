@@ -14,8 +14,7 @@ export const App = () => {
   useEffect(() => {
     if (!alanBtnInstance.current) {
       alanBtnInstance.current = alanBtn({
-        key:
-          'eadbbd1f27a4bba4544cee3df97499fd2e956eca572e1d8b807a3e2338fdd0dc/stage',
+        key: '',
         onCommand: commandData => {
           if (commandData.command === 'gotoFaq') {
             scroller.scrollTo(`accordion-button-${commandData.faqId}`, {
