@@ -6,7 +6,7 @@ export const Navbar = ({ toggleColorFlag }) => {
   return (
     <Flex align="center" boxShadow="base" p="2" mb="2">
       <Box p="2">
-        <Heading size="lg">CodeAlan</Heading>
+        <Heading size="lg">E-commerce Support</Heading>
       </Box>
       <Spacer />
       <Box>

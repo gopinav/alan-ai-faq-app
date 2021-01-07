@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-export const ColorModeSwitcher = props => {
+export const ColorModeSwitcher = ({ toggleColorFlag, ...rest }) => {
   const firstUpdate = useRef(true);
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue('dark', 'light');
@@ -14,7 +14,7 @@ export const ColorModeSwitcher = props => {
       return;
     }
     toggleColorMode();
-  }, [props.toggleColorFlag]);
+  }, [toggleColorFlag]);
 
   return (
     <IconButton
@@ -26,7 +26,7 @@ export const ColorModeSwitcher = props => {
       marginLeft="2"
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
-      {...props}
+      {...rest}
     />
   );
 };

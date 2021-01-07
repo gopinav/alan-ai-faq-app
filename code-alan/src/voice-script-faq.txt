@@ -1,0 +1,101 @@
+// Q1
+question(
+  'How (can|do) I create an account?',
+  'Help me create an account (please|)',
+  p => {
+    p.play({ command: 'gotoFaq', faqId: 1 });
+    p.play(
+      'You can create your account by entering and verifying your mobile number. Click on Create New Account after that and fill up the form to create your account.'
+    );
+  }
+);
+// Q2
+question(
+  '(How|where) (can|do) I pay (for|) (my|) (order|)?',
+  'What are my payment options?',
+  'What payment methods do you accept?',
+  'How can I pay?',
+  p => {
+    p.play({ command: 'gotoFaq', faqId: 2 });
+    p.play(
+      'We support the following payment options: Cash On Delivery, Credit Card, Debit Card, Net banking and Gift Card'
+    );
+  }
+);
+// Q3
+question('How can I check delivery to my PIN Code?', p => {
+  p.play({ command: 'gotoFaq', faqId: 3 });
+  p.play(
+    'You can find out if we deliver to your PIN Code using the courier serviceability tool available on the product page.'
+  );
+});
+// Q4
+question(
+  'How (can|do) I (find|see|check) (the status of|) my order?',
+  'Where (do|can) I (find|see|check) my order (status|)?',
+  p => {
+    p.play({ command: 'gotoFaq', faqId: 4 });
+    p.play(
+      'Please tap on "My Orders" section under main menu of App or Website to check your order status.'
+    );
+  }
+);
+// Q5
+intent('What is (the|) Cancellation Policy?', p => {
+  p.play({ command: 'gotoFaq', faqId: 5 });
+  p.play(
+    'You can cancel an order when it is in packed or shipped status, as long as the cancel option is available on App or Website.'
+  );
+});
+//Q6
+question('How (can|do) I cancel (my|) (order|package|items|delivery)?', p => {
+  p.play({ command: 'gotoFaq', faqId: 6 });
+  p.play(
+    'Tap on "My Orders" section under the main menu of your App/Website and then select the item or order you want to cancel'
+  );
+});
+// Q7
+question(
+  '(I just cancelled my order. |) When (will|) I receive (my|) (refund|money)?',
+  'How (can|do) I (get|receive) (my|) (refund|money)?',
+  p => {
+    p.play({ command: 'gotoFaq', faqId: 7 });
+    p.play(
+      'For payments made via Credit Card, Debit Card, Net Banking, or Wallet you will receive refund into the source account within 7-10 days from the time of order cancellation.'
+    );
+  }
+);
+// Q8
+question(
+  'How do I create a Return Request?',
+  'Can I return my (items|order|delivery|package)?',
+  'How (can|do) I return?',
+  p => {
+    p.play({ command: 'gotoFaq', faqId: 8 });
+    p.play(
+      'You can create a Return in three simple steps. 1. Tap on MyOrders.  2. Choose the item to be Returned.  3.Enter details requested and create a return request.'
+    );
+  }
+);
+// Q9
+question(
+  'How do I return (multiple|all) (products|items) (from a single|in one) order?',
+  'Can I return more than one (product|item) from (my|) (order|package|delivery)?',
+  p => {
+    p.play({ command: 'gotoFaq', faqId: 9 });
+    p.play(
+      'If you are returning multiple products from a single order then, you will receive a separate Return ID via e-mail for each item. If you are self-shipping the products, you can ship all the products in a single shipment.'
+    );
+  }
+);
+// Q10
+question(
+  'How long would it take (me|) to (receive|get) (the|) refund (of the returned|) (product|item|order)?',
+  'When (will|can) I (expect|get|receive) a refund (for my order|)?',
+  p => {
+    p.play({ command: 'gotoFaq', faqId: 10 });
+    p.play(
+      'After the refund has been initiated as per the Returns Policy, the refund amount is expected to reflect in the customer account in 1-3 business days.'
+    );
+  }
+);

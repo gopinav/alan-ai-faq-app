@@ -8,6 +8,7 @@ import { scroller } from 'react-scroll';
 export const App = () => {
   const alanBtnInstance = useRef(null);
   const [index, setIndex] = useState(null);
+  const [currentFaqId, setCurrentFaqId] = useState(null);
   const [toggleColorFlag, setToggleColorFlag] = useState(false);
 
   useEffect(() => {
@@ -23,6 +24,7 @@ export const App = () => {
               smooth: 'easeInOutQuart',
             });
             setIndex(commandData.faqId - 1);
+            setCurrentFaqId(commandData.faqId);
           } else if (commandData.command === 'toggleColorMode') {
             setToggleColorFlag(flag => !flag);
           }
@@ -34,7 +36,12 @@ export const App = () => {
   return (
     <ChakraProvider theme={theme}>
       <Navbar toggleColorFlag={toggleColorFlag} />
-      <Faq index={index} setIndex={setIndex} />
+      <Faq
+        index={index}
+        setIndex={setIndex}
+        currentFaqId={currentFaqId}
+        setCurrentFaqId={setCurrentFaqId}
+      />
     </ChakraProvider>
   );
 };

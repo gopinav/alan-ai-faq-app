@@ -1,0 +1,7 @@
+question(
+    "Toggle color mode",
+    p => {
+        p.play({command: "toggleColorMode"})
+        p.play('Toggling color mode');
+    }
+);
